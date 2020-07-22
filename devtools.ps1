@@ -5,34 +5,41 @@ if ((gcm choco.exe -ErrorAction SilentlyContinue) -eq $null)
 
 cinst poshgit -y
 cinst 7zip -y
-cinst rdcman -y
-cinst pscx -y
+
+#cinst rdcman -y #not supported anymore
+
 cinst sublimetext3 -y
-cinst SublimeText3.PackageControl -y
+#cinst SublimeText3.PackageControl -y #broken?
 cinst sublimetext3.powershellalias -y
-cinst linqpad4 -y
+cinst linqpad -y --ignorechecksum
 cinst foxitreader -y
+cinst markdownmonster -y
 
 cinst firefox -y
 cinst chrome -y
-cinst fiddler4 -y
+cinst fiddler -y
 cinst wireshark -y
 cinst putty -y
 
 cinst treesizefree -y
 cinst sysinternals -y
 cinst ccleaner -y
-cinst jing -y
+#cinst jing -y
 
 cinst slack -y
-cinst skype -y
-cinst ncrunch-vs2013 -y
+#cinst skype -y
+cinst ncrunch-vs2019 -y
 
-cinst vcredist2010 -y
-cinst soapui -y
+cinst ssms -y
 
-#choco install sqlserver2012express
+cinst vscode -y
+cinst azure-data-studio -y
+cinst microsoftazurestorageexplorer -y
+
+cinst docker-desktop -y #needs restart
+
 #choco install sqlsentryplanexplorer
 #choco install planexplorerssmsaddin
 #choco install queueexplorer-professional
 
+Install-Module -Name Pscx -AllowClobber
